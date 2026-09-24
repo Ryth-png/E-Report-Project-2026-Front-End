@@ -98,6 +98,21 @@ a:hover i.fa-arrow-right {
     width: 100%;
 }
 
+.navbar-nav .nav-link .guide::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: width 0.25s ease;
+}
+
+.navbar-nav .nav-link .guide:hover::after {
+    width: 100%;
+}
+
 /* hero */
 #hero {
     background: linear-gradient(180deg, #eaf2ff 0%, #ffffff 100%);
