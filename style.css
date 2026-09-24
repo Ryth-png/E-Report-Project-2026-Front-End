@@ -1,0 +1,269 @@
+/* ==========================================================
+   Fonts
+   ========================================================== */
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+/* ==========================================================
+   Base / global
+   ========================================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Keep anchored sections from hiding under the sticky navbar */
+section[id] {
+    scroll-margin-top: 90px;
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Smooth, friendly hover feel on every button */
+.btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(13, 110, 253, 0.2);
+}
+
+/* Little nudge on "read more / back" arrow icons */
+a i.fa-arrow-right {
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+a:hover i.fa-arrow-right {
+    transform: translateX(4px);
+}
+
+/* ==========================================================
+   Navbar
+   ========================================================== */
+.navbar-logo {
+  width: 40px;
+  height: auto;
+  object-fit: cover;
+  transition: width 0.15s ease;
+}
+
+@media (min-width: 1200px) {
+  .navbar-logo { width: 48px; }
+}
+
+@media (max-width: 576px) {
+  .navbar-logo { width: 34px; }
+}
+
+/* anim */
+.navbar-nav .nav-link {
+    position: relative;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.25s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* hero */
+#hero {
+    background: linear-gradient(180deg, #eaf2ff 0%, #ffffff 100%);
+}
+
+.hero .col img {
+    width: 500px;
+}
+
+.hero .col p {
+    width: 500px;
+}
+
+/* about */
+#about {
+    background-color: #f8f9fa;
+}
+
+.about .col img {
+    width: 600px;
+}
+
+/* service */
+#service .col.bg-primary {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#service .col.bg-primary:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(13, 110, 253, 0.25);
+}
+
+/* Circle badge behind each service icon */
+#service .col.bg-primary > i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+}
+
+/* recent */
+#recent {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Category label on top of each card image */
+.card p.position-absolute {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/* Pagination */
+.pagination .page-link {
+    border-radius: 8px;
+    margin: 0 3px;
+    border: none;
+    color: #0d6efd;
+    transition: background-color 0.2s ease;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+/* faq */
+.accordion-button {
+    border-radius: 8px !important;
+}
+
+.accordion-item {
+    border: none;
+    margin-bottom: 4px;
+}
+
+/* footer */
+footer {
+    margin-top: 100px;
+    padding-bottom: 20px;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    opacity: 75%;
+}
+
+.footer-link:hover {
+    color: #fdfdfd;
+    text-decoration: underline;
+    opacity: 100%;
+}
+
+/* Circle badge behind each footer contact icon */
+.footer-link i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.14);
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.footer-link:hover i {
+    background-color: rgba(255, 255, 255, 0.28);
+}
+
+.copyright {
+    color: #fff;
+    opacity: 75%;
+    margin-top: 100px;
+}
+
+/* reponvie */
+@media (max-width: 1024px) {
+    .hero .col img {
+        width: 400px;
+    }
+    .hero .col p {
+        font-size: 14px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 992px) {
+    section {
+        padding-top: 50px;
+    }
+
+    #hero {
+        padding-top: 50px;
+    }
+    .hero .col img {
+        width: 300px;
+    }
+    .hero .col p {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .about .col img {
+        width: 300px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .hero .col img {
+        width: 400px;
+    }
+}
