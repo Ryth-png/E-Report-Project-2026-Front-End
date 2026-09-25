@@ -113,6 +113,37 @@ a:hover i.fa-arrow-right {
     width: 100%;
 }
 
+.tip-card {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tip-card i {
+    font-size: 1.4rem;
+}
+
+.cta-banner {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+}
+
+.step-card {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
 /* hero */
 #hero {
     background: linear-gradient(180deg, #eaf2ff 0%, #ffffff 100%);
